@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from 'axios';
 
 export const sendMessage = async (chatId: number, message: string) => {
     const TOKEN = process.env.REACT_APP_TELEGRAM_API_TOKEN;
@@ -10,4 +10,4 @@ export const sendMessage = async (chatId: number, message: string) => {
     );
 
     return response.data;
-}
+};

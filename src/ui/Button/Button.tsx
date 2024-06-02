@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import styles from './button.module.css';
 
 interface Props extends React.HTMLProps<HTMLButtonElement> {
@@ -9,7 +9,7 @@ interface Props extends React.HTMLProps<HTMLButtonElement> {
 const Button = ({ text, ...buttonProps }: Props) => {
     return(
         <button {...buttonProps} className={styles.button}>{text}</button>
-    )
-}
+    );
+};
 
 export default Button;

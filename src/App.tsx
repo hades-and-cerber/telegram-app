@@ -1,7 +1,7 @@
-import React, {useEffect} from 'react';
-import {useTelegram} from "./hooks";
-import {Header} from "./ui/Header";
-import {Form} from './Components/Form';
+import React, { useEffect } from 'react';
+import { useTelegram } from './hooks';
+import { Header } from './ui/Header';
+import { Form } from './Components/Form';
 
 const App = () => {
     const { tg } = useTelegram();
@@ -10,7 +10,7 @@ const App = () => {
         tg.ready();
         tg.expand();
         // eslint-disable-next-line
-    }, []);
+    }, [])
 
   return (
     <div className="App">
@@ -18,6 +18,6 @@ const App = () => {
         <Form />
     </div>
   );
-}
+};
 
 export default App;

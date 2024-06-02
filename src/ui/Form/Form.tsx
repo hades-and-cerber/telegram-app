@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import styles from './form.module.css'
-import { Button } from "../Button";
+import styles from './form.module.css';
+import { Button } from '../Button';
 
 interface Props {
     onSubmit: (inputText: string) => void;
@@ -13,7 +13,7 @@ const Form = ({ onSubmit }: Props) => {
     const handleSubmit = (event: React.FormEvent) => {
         event.preventDefault();
         onSubmit(inputText);
-    }
+    };
 
     return (
         <form onSubmit={handleSubmit} className={styles.form}>
