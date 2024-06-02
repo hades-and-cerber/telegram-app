@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const sendMessage = async (chatId: number, message: string) => {
-    const TOKEN = process.env.TELEGRAM_API_TOKEN;
+    const TOKEN = process.env.REACT_APP_TELEGRAM_API_TOKEN;
 
     const text = encodeURIComponent(message);
 
