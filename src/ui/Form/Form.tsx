@@ -1,23 +1,22 @@
 import React, { useState } from 'react';
 import styles from './form.module.css'
-import {useTelegram} from "../../hooks";
-import {Button} from "../Button";
-import {sendMessage} from "../../service/telegram";
+import { Button } from "../Button";
 
-const Form = () => {
+interface Props {
+    onSubmit: (inputText: string) => void;
+
+}
+
+const Form = ({ onSubmit }: Props) => {
     const [inputText, setInputText] = useState<string>('');
-    const { user, onClose } = useTelegram();
 
-    const onSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
-        if(!user) return
-        const text = `Congratulations, your message was successfully sent \n Message: ${inputText}`;
-        await sendMessage(user.id, text);
-        onClose();
+    const handleSubmit = (event: React.FormEvent) => {
+        event.preventDefault();
+        onSubmit(inputText);
     }
 
     return (
-        <form onSubmit={onSubmit} className={styles.form}>
+        <form onSubmit={handleSubmit} className={styles.form}>
             <label htmlFor="wish">What would you like this bot to do for you ?</label>
             <input
                 className={styles.input}
