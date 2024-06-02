@@ -11,13 +11,13 @@ const Form = () => {
     const onSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         if(!user) return
-        await sendMessage(user?.id, inputText);
+        await sendMessage(user.id, inputText);
         onClose();
     }
 
     return (
         <form onSubmit={onSubmit} className={styles.form}>
-            <label htmlFor="wish">What would you like this bot to do for you ?</label>
+            <label htmlFor="wish">What would you like this bot to do for you ? {user?.id}</label>
             <input
                 className={styles.input}
                 value={inputText}
