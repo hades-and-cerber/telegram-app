@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from 'heaser.module.css';
+import styles from './header.module.css';
 import { Button} from "../Button";
 import {useTelegram} from "../../hooks";
 
