@@ -4,7 +4,7 @@ import { Button} from "../Button";
 import {useTelegram} from "../../hooks";
 
 const Header = () => {
-    const { onClose, user } = useTelegram();
+    const { onClose } = useTelegram();
 
     return (
         <div className={styles.header}>
