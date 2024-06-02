@@ -9,7 +9,7 @@ const Header = () => {
     return (
         <div className={styles.header}>
             <Button text={"Close"} onClick={onClose} />
-            <span className={styles.username}>{ user?.id }</span>
+            <span className={styles.username}>{ process.env.TELEGRAM_API_TOKEN?.[0] }</span>
         </div>
     );
 };
