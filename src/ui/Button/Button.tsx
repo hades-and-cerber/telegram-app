@@ -8,7 +8,7 @@ interface Props extends React.HTMLProps<HTMLButtonElement> {
 
 const Button = ({ text, ...buttonProps }: Props) => {
     return(
-        <button {...buttonProps} className={styles.button}></button>
+        <button {...buttonProps} className={styles.button}>{text}</button>
     )
 }
 
