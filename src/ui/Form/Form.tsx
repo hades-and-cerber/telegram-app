@@ -2,14 +2,17 @@ import React, { useState } from 'react';
 import styles from './form.module.css'
 import {useTelegram} from "../../hooks";
 import {Button} from "../Button";
+import {sendMessage} from "../../service/telegram";
 
 const Form = () => {
     const [inputText, setInputText] = useState<string>('');
-    const { tg } = useTelegram();
+    const { user, onClose } = useTelegram();
 
-    const onSubmit = (e: React.FormEvent) => {
+    const onSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        tg.sendData(inputText);
+        if(!user) return
+        await sendMessage(user?.id, inputText);
+        onClose();
     }
 
     return (
