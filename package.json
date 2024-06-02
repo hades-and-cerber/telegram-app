@@ -41,6 +41,7 @@
     ]
   },
   "devDependencies": {
-    "@types/telegram-web-app": "^7.2.1"
+    "@types/telegram-web-app": "^7.2.1",
+    "typescript-plugin-css-modules": "^5.1.0"
   }
 }
