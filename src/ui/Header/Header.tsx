@@ -9,7 +9,7 @@ const Header = () => {
     return (
         <div className={styles.header}>
             <Button text={"Close"} onClick={onClose} />
-            <span className={styles.username}>{ user?.username }</span>
+            <span className={styles.username}>{ user?.id }</span>
         </div>
     );
 };
