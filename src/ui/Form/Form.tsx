@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styles from './form.module.css'
 import {useTelegram} from "../../hooks";
+import {Button} from "../Button";
 
 const Form = () => {
     const [inputText, setInputText] = useState<string>('');
@@ -22,6 +23,7 @@ const Form = () => {
                 id="wish"
                 max="20"
             />
+            <Button type="submit" text="Send" />
         </form>
     );
 };
