@@ -8,6 +8,7 @@ const App = () => {
 
     useEffect(() => {
         tg.ready();
+        tg.expand();
         // eslint-disable-next-line
     }, []);
 
