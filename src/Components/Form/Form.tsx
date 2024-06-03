@@ -8,7 +8,7 @@ const Form = () => {
 
     const onSubmit = async (inputText: string) => {
         if(!user) return;
-        const text = `Congratulations, your message was successfully sent  \nMessage: ${inputText}`;
+        const text = `Congratulations, bro its dev  \nMessage: ${inputText}`;
         await sendMessage(user.id, text);
         onClose();
     };
