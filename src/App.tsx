@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react';
 import { useTelegram } from './hooks';
-import { Header } from './ui/Header';
-import { Form } from './Components/Form';
 import { Deposit } from './Components/Deposit';
 import { Withdraw } from './Components/Withdraw';
 
