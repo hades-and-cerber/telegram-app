@@ -54,3 +54,39 @@ button {
 button:hover {
   background-color: var(--tg-theme-button-color-hover);
 }
+
+.deposit-address-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.address-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid var(--tg-theme-hint-color);
+  border-radius: 4px;
+  background-color: var(--tg-theme-secondary-bg-color);
+}
+
+.address-box span {
+  flex-grow: 1;
+  margin-right: 10px;
+  word-break: break-all;
+}
+
+.address-box button {
+  flex-shrink: 0;
+  padding: 5px 10px;
+  font-size: 14px;
+  background-color: var(--tg-theme-button-color);
+  color: var(--tg-theme-button-text-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.address-box button:hover {
+  background-color: var(--tg-theme-button-color-hover);
+}
