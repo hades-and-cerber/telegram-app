@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { useTelegram } from './hooks';
 import { Header } from './ui/Header';
 import { Form } from './Components/Form';
+import { Deposit } from './Components/Deposit';
+import { Withdraw } from './Components/Withdraw';
 
 const App = () => {
     const { tg } = useTelegram();
@@ -14,8 +16,9 @@ const App = () => {
 
   return (
     <div className="App">
-        <Header />
-        <Form />
+        <h1>Crypto Transaction App</h1>
+        <Deposit />
+        <Withdraw />
     </div>
   );
 };
