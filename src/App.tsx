@@ -18,7 +18,7 @@ const App = () => {
   return (
     <div className="App">
       <Header />
-      <h1>Crypto Transaction App</h1>
+      <h1>{tg.themeParams.text_color}</h1>
       <Deposit />
       <Withdraw />
     </div>

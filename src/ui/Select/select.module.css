@@ -1,9 +1,9 @@
 .select {
-    background: white;
+    background: none;
     border-radius: 8px;
 }
 
 .select div {
-    background: white !important;
+    background: none !important;
     border-radius: 8px !important;
 }

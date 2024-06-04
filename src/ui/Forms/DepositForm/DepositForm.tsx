@@ -22,7 +22,7 @@ const DepositForm = ({ depositAddress,token, chain, onTokenChange, onChainChange
   };
 
   return (
-    <Container className={styles.container}>
+    <Container className={styles.container} sx={{ display: 'flex', width: '95%' }}>
       <ToastMessage
         isOpen={isSnackbarOpen}
         handleClose={() => setIsSnackbarOpen(false)}

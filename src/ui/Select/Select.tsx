@@ -17,9 +17,10 @@ const Select = ({ options, onChange, value, label, fullWidth }: Props) => {
     onChange(event.target.value as string);
   };
 
-  return (<FormControl variant="filled" fullWidth={fullWidth}>
-    <InputLabel id={label}>{label || 'Select'}</InputLabel>
+  return (<FormControl fullWidth={fullWidth}>
+    <InputLabel color="primary" id={label}>{label || 'Select'}</InputLabel>
     <SelectMUI
+      color="primary"
       className={styles.select}
       value={value}
       label={label || 'Select'}
@@ -27,7 +28,7 @@ const Select = ({ options, onChange, value, label, fullWidth }: Props) => {
       id={label}
     >
       {options.map((option, index) => (
-        <MenuItem key={index} value={option.value}>
+        <MenuItem key={index} value={option.value} color="primary">
           {option.label}
         </MenuItem>
       ))}

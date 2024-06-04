@@ -39,5 +39,5 @@ export const createMUITheme = (themeParams: ThemeParams) => createTheme({
       textTransform: 'none',
     },
   },
-  spacing: 8,
+  spacing: 4,
 });

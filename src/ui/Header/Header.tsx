@@ -7,7 +7,7 @@ const Header = () => {
   const { user } = useTelegram();
 
   return (
-    <AppBar>
+    <AppBar position="static">
       <Toolbar className={styles.header}>
         <Typography variant="body1">{user?.first_name}</Typography>
         <Typography variant="body2">Balance: ${15}</Typography>
