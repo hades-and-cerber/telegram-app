@@ -7,3 +7,7 @@
     outline: none;
     cursor: pointer;
 }
+
+.fullWidth {
+    width: 100%;
+}

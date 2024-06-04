@@ -3,12 +3,13 @@ import styles from './button.module.css';
 
 interface Props extends React.HTMLProps<HTMLButtonElement> {
     text: string;
+    fullWidth?: boolean;
     type?: 'button' | 'submit' | 'reset';
 }
 
-const Button = ({ text, ...buttonProps }: Props) => {
+const Button = ({ text, fullWidth, ...buttonProps }: Props) => {
   return(
-    <button {...buttonProps} className={styles.button}>{text}</button>
+    <button {...buttonProps} className={`${styles.button} ${fullWidth ? styles.fullWidth : ''}`}>{text}</button>
   );
 };
 
