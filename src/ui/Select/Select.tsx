@@ -2,6 +2,7 @@ import React from 'react';
 import { ISelect } from '../../types/common';
 import { SelectChangeEvent } from '@mui/material/Select/SelectInput';
 import { FormControl, InputLabel, MenuItem, Select as SelectMUI } from '@mui/material';
+import { useTelegram } from '../../hooks';
 
 interface Props {
     options: ISelect[];
@@ -12,12 +13,18 @@ interface Props {
 }
 
 const Select = ({ options, onChange, value, label, fullWidth }: Props) => {
+  const { tg } = useTelegram();
   const handleChange = (event: SelectChangeEvent) => {
     onChange(event.target.value as string);
   };
 
   return (<FormControl variant="filled" fullWidth={fullWidth}>
-    <InputLabel id={label}>{label || 'Select'}</InputLabel>
+    <InputLabel
+      style={{ backgroundColor: tg.themeParams.secondary_bg_color }}
+      id={label}
+    >
+      {label || 'Select'}
+    </InputLabel>
     <SelectMUI
       value={value}
       label={label || 'Select'}
