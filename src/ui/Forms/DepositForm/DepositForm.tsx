@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './depositForm.module.css';
 import { SetStateType } from '../../../types/common';
-import { Button } from '../../Button';
 import { Select } from '../../Select';
 import { DEPOSIT_CURRENCIES, USDT_CHAINS } from '../../../constants/currency';
+import { Typography, Button } from '@mui/material';
 
 interface Props {
     depositAddress: string;
@@ -19,8 +19,8 @@ const DepositForm = ({ depositAddress, onTokenChange, onChainChange }: Props) =>
 
   return (
     <div className={styles.container}>
-      <h2>Deposit</h2>
-      <p>Select the token to deposit (Min 2.0 USDT)</p>
+      <Typography variant="h4" align="center" >Deposit</Typography>
+      <Typography align="center" >Select the token to deposit (Min 2.0 USDT)</Typography>
       <Select
         fullWidth
         options={DEPOSIT_CURRENCIES}
@@ -37,7 +37,7 @@ const DepositForm = ({ depositAddress, onTokenChange, onChainChange }: Props) =>
         <p>USDT Deposit Address</p>
         <div className={styles.addressBox}>
           <span>{depositAddress}</span>
-          <Button text="Copy" onClick={handleCopy} fullWidth />
+          <Button variant="contained" onClick={handleCopy} fullWidth>Copy</Button>
         </div>
       </div>
     </div>

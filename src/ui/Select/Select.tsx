@@ -16,7 +16,7 @@ const Select = ({ options, onChange, value, label, fullWidth }: Props) => {
     onChange(event.target.value as string);
   };
 
-  return (<FormControl fullWidth={fullWidth}>
+  return (<FormControl variant="filled" fullWidth={fullWidth}>
     <InputLabel id={label}>{label || 'Select'}</InputLabel>
     <SelectMUI
       value={value}
