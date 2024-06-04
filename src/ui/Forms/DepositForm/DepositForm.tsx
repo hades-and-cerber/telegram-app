@@ -8,11 +8,13 @@ import { ToastMessage } from '../../ToastMessage';
 
 interface Props {
     depositAddress: string;
+    token: string;
+    chain: string;
     onTokenChange: SetStateType<string>
     onChainChange: SetStateType<string>;
 }
 
-const DepositForm = ({ depositAddress, onTokenChange, onChainChange }: Props) => {
+const DepositForm = ({ depositAddress,token, chain, onTokenChange, onChainChange }: Props) => {
   const [isSnackbarOpen, setIsSnackbarOpen] = React.useState(false);
   const handleCopy = () => {
     navigator.clipboard.writeText(depositAddress);
@@ -34,12 +36,14 @@ const DepositForm = ({ depositAddress, onTokenChange, onChainChange }: Props) =>
         options={DEPOSIT_CURRENCIES}
         onChange={onTokenChange}
         label="Select currency"
+        value={token}
       />
       <Select
         fullWidth
         options={USDT_CHAINS}
         onChange={onChainChange}
         label="Select chain"
+        value={chain}
       />
       <div className={styles.depositAddressContainer}>
         <p>USDT Deposit Address</p>

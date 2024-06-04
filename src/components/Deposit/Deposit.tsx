@@ -32,6 +32,8 @@ const Deposit: React.FC = () => {
     />
     <DepositForm
       depositAddress={depositAddress}
+      token={token}
+      chain={chain}
       onChainChange={setChain}
       onTokenChange={setToken}
     />
