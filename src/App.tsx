@@ -3,9 +3,11 @@ import { useTelegram } from './hooks';
 import { Deposit } from './components/Deposit';
 import { Withdraw } from './components/Withdraw';
 import { Header } from './ui/Header';
+import { createMUITheme } from './themes/theme';
 
 const App = () => {
   const { tg } = useTelegram();
+  createMUITheme(tg.themeParams);
 
   useEffect(() => {
     tg.ready();
