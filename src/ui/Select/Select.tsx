@@ -2,6 +2,7 @@ import React from 'react';
 import { ISelect } from '../../types/common';
 import { SelectChangeEvent } from '@mui/material/Select/SelectInput';
 import { FormControl, InputLabel, MenuItem, Select as SelectMUI } from '@mui/material';
+import styles from './select.module.css';
 
 interface Props {
     options: ISelect[];
@@ -19,8 +20,8 @@ const Select = ({ options, onChange, value, label, fullWidth }: Props) => {
   return (<FormControl variant="filled" fullWidth={fullWidth}>
     <InputLabel id={label}>{label || 'Select'}</InputLabel>
     <SelectMUI
+      className={styles.select}
       value={value}
-      variant="filled"
       label={label || 'Select'}
       onChange={handleChange}
       id={label}
