@@ -19,13 +19,9 @@ const Select = ({ options, onChange, value, label, fullWidth }: Props) => {
   };
 
   return (<FormControl variant="filled" fullWidth={fullWidth}>
-    <InputLabel
-      style={{ color: tg.themeParams.hint_color }}
-      id={label}
-    >
-      {label || 'Select'}
-    </InputLabel>
+    <InputLabel id={label}>{label || 'Select'}</InputLabel>
     <SelectMUI
+      sx={{ color: tg.themeParams.hint_color }}
       value={value}
       label={label || 'Select'}
       onChange={handleChange}
