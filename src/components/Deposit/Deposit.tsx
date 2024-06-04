@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { DepositForm } from '../../ui/Forms/DepositForm';
 import { getDepositAddress } from '../../service/payment';
+import { DEFAULT_CHAIN, DEFAULT_CURRENCY } from '../../constants/currency';
 
 const Deposit: React.FC = () => {
-  const [token, setToken] = useState<string>('USDT');
-  const [chain, setChain] = useState<string>('TRC20');
+  const [token, setToken] = useState<string>(DEFAULT_CURRENCY.value);
+  const [chain, setChain] = useState<string>(DEFAULT_CHAIN.value);
   const [depositAddress, setDepositAddress] = useState<string>('');
 
   const getDeposit = async (token: string, chain: string) => {

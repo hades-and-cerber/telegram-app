@@ -15,3 +15,6 @@ export const USDT_CHAINS = [
     label: 'USDT-Ethereum (ERC20)'
   }
 ];
+
+export const DEFAULT_CURRENCY = DEPOSIT_CURRENCIES[0];
+export const DEFAULT_CHAIN = USDT_CHAINS[0];

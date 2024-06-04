@@ -22,12 +22,16 @@ const DepositForm = ({ depositAddress, onTokenChange, onChainChange }: Props) =>
       <h2>Deposit</h2>
       <p>Select the token to deposit (Min 2.0 USDT)</p>
       <Select
+        fullWidth
         options={DEPOSIT_CURRENCIES}
         onChange={onTokenChange}
+        label="Select currency"
       />
       <Select
+        fullWidth
         options={USDT_CHAINS}
         onChange={onChainChange}
+        label="Select chain"
       />
       <div className={styles.depositAddressContainer}>
         <p>USDT Deposit Address</p>
