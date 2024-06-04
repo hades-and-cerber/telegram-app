@@ -7,7 +7,7 @@ export const createMUITheme = (themeParams: ThemeParams) => createTheme({
     },
     background: {
       default: themeParams.bg_color || '#ffffff', // Background color
-      paper: themeParams.secondary_bg_color || '#f9f9f9', // Paper background
+      paper: themeParams.button_color || '#f9f9f9', // Paper background
     },
     text: {
       primary: themeParams.text_color || '#2c3e50', // Text color
