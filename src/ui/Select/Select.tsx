@@ -19,8 +19,8 @@ const Select = ({ options, onChange, value, label, fullWidth }: Props) => {
   return (<FormControl variant="filled" fullWidth={fullWidth}>
     <InputLabel id={label}>{label || 'Select'}</InputLabel>
     <SelectMUI
-      sx={{ backgroundColor: 'white' }}
       value={value}
+      variant="filled"
       label={label || 'Select'}
       onChange={handleChange}
       id={label}
