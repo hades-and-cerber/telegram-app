@@ -20,7 +20,7 @@ const Select = ({ options, onChange, value, label, fullWidth }: Props) => {
 
   return (<FormControl variant="filled" fullWidth={fullWidth}>
     <InputLabel
-      style={{ backgroundColor: tg.themeParams.secondary_bg_color }}
+      style={{ color: tg.themeParams.hint_color }}
       id={label}
     >
       {label || 'Select'}
