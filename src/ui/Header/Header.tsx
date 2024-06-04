@@ -1,16 +1,22 @@
 import React from 'react';
 import styles from './header.module.css';
-import { Button } from '../Button';
 import { useTelegram } from '../../hooks';
+import { AppBar, Button, ButtonGroup, Toolbar, Typography } from '@mui/material';
 
 const Header = () => {
-  const { onClose, user } = useTelegram();
+  const { user } = useTelegram();
 
   return (
-    <div className={styles.header}>
-      <Button text="Close" onClick={onClose} />
-      <span className={styles.username}>{user?.first_name}</span>
-    </div>
+    <AppBar>
+      <Toolbar className={styles.header}>
+        <Typography variant="body1">{user?.first_name}</Typography>
+        <Typography variant="body2">Balance: ${15}</Typography>
+        <ButtonGroup>
+          <Button color="inherit" size="small">Deposit</Button>
+          <Button color="inherit" size="small">Withdraw</Button>
+        </ButtonGroup>
+      </Toolbar>
+    </AppBar>
   );
 };
 

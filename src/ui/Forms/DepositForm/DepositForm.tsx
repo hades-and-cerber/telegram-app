@@ -3,7 +3,7 @@ import styles from './depositForm.module.css';
 import { SetStateType } from '../../../types/common';
 import { Select } from '../../Select';
 import { DEPOSIT_CURRENCIES, USDT_CHAINS } from '../../../constants/currency';
-import { Typography, Button } from '@mui/material';
+import { Typography, Button, Container } from '@mui/material';
 import { ToastMessage } from '../../ToastMessage';
 
 interface Props {
@@ -22,7 +22,7 @@ const DepositForm = ({ depositAddress,token, chain, onTokenChange, onChainChange
   };
 
   return (
-    <div className={styles.container}>
+    <Container className={styles.container}>
       <ToastMessage
         isOpen={isSnackbarOpen}
         handleClose={() => setIsSnackbarOpen(false)}
@@ -52,7 +52,7 @@ const DepositForm = ({ depositAddress,token, chain, onTokenChange, onChainChange
           <Button variant="contained" onClick={handleCopy} fullWidth>Copy</Button>
         </div>
       </div>
-    </div>
+    </Container>
   );
 };
 

@@ -26,7 +26,7 @@ export const createMUITheme = (themeParams: ThemeParams) => createTheme({
       fontWeight: 500,
     },
     body1: {
-      fontSize: '1rem',
+      fontSize: '0.875rem',
       fontWeight: 400,
     },
     body2: {
