@@ -29,20 +29,20 @@ const DepositForm = ({ depositAddress,token, chain, onTokenChange, onChainChange
         variant="success"
         text="Address copied to clipboard"
       />
-      <Typography variant="h4" align="center" >Deposit</Typography>
+      <Typography variant="h4" align="center" >Deposit💰</Typography>
       <Typography align="center" >Select the token to deposit (Min 2.0 USDT)</Typography>
       <Select
         fullWidth
         options={DEPOSIT_CURRENCIES}
         onChange={onTokenChange}
-        label="Select currency"
+        label="Currency"
         value={token}
       />
       <Select
         fullWidth
         options={USDT_CHAINS}
         onChange={onChainChange}
-        label="Select chain"
+        label="Chain"
         value={chain}
       />
       <div className={styles.depositAddressContainer}>
