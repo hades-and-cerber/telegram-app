@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, Button, TextField, Tooltip } from '@mui/material';
+import { Box, Button, TextField, Tooltip, useTheme } from '@mui/material';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import { ToastMessage } from '../ToastMessage';
 import QRCode from 'react-qr-code';
@@ -10,6 +10,9 @@ interface Props {
 
 const CryptoAddressBox = ({ address }: Props) => {
   const [isSnackbarOpen, setIsSnackbarOpen] = useState(false);
+
+  const theme = useTheme();
+
   const handleCopy = () => {
     navigator.clipboard.writeText(address);
     setIsSnackbarOpen(true);
@@ -29,7 +32,7 @@ const CryptoAddressBox = ({ address }: Props) => {
       }}
     >
       <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-        <QRCode value={address} size={128} />
+        <QRCode bgColor={theme.palette.background.paper} value={address} size={128} />
       </Box>
       <TextField
         value={address}
