@@ -41,25 +41,25 @@ export const createMUITheme = (themeParams: ThemeParams, isDarkMode: boolean) =>
     palette: {
       mode: 'dark',
       background: {
-        default: '#000000', // bg_color
-        paper: '#1c1c1d',   // secondary_bg_color
+        default: themeParams.bg_color || '#000000', // bg_color
+        paper: themeParams.secondary_bg_color || '#1c1c1d',   // secondary_bg_color
       },
       primary: {
-        main: '#3e88f7',    // button_color, link_color, accent_text_color
+        main: themeParams.button_color || '#3e88f7',    // button_color, link_color, accent_text_color
       },
       secondary: {
-        main: '#8d8e93',    // section_header_text_color
+        main: themeParams.section_header_text_color || '#8d8e93',    // section_header_text_color
       },
       text: {
-        primary: '#ffffff', // text_color
-        secondary: '#98989e', // subtitle_text_color, hint_color
+        primary: themeParams.text_color || '#ffffff', // text_color
+        secondary: themeParams.subtitle_text_color || '#98989e', // subtitle_text_color, hint_color
         disabled: '#545458', // section_separator_color
       },
       error: {
-        main: '#eb5545',    // destructive_text_color
+        main: themeParams.destructive_text_color || '#eb5545',    // destructive_text_color
       },
       action: {
-        active: '#3e88f7',   // accent_text_color
+        active: themeParams.accent_text_color || '#3e88f7',   // accent_text_color
       },
     },
   });
@@ -69,25 +69,25 @@ export const createMUITheme = (themeParams: ThemeParams, isDarkMode: boolean) =>
     palette: {
       mode: 'light',
       background: {
-        default: '#ffffff', // bg_color
-        paper: '#efeff4',   // secondary_bg_color
+        default: themeParams.bg_color || '#ffffff', // bg_color
+        paper: themeParams.secondary_bg_color || '#efeff4',   // secondary_bg_color
       },
       primary: {
-        main: '#007aff',    // button_color, link_color, accent_text_color
+        main: themeParams.button_color || '#007aff',    // button_color, link_color, accent_text_color
       },
       secondary: {
-        main: '#6d6d72',    // section_header_text_color
+        main: themeParams.section_header_text_color || '#6d6d72',    // section_header_text_color
       },
       text: {
-        primary: '#000000', // text_color
-        secondary: '#8e8e93', // subtitle_text_color, hint_color
+        primary: themeParams.text_color || '#000000', // text_color
+        secondary: themeParams.subtitle_text_color || '#8e8e93', // subtitle_text_color, hint_color
         disabled: '#c8c7cc', // section_separator_color
       },
       error: {
-        main: '#ff3b30',    // destructive_text_color
+        main: themeParams.destructive_text_color || '#ff3b30',    // destructive_text_color
       },
       action: {
-        active: '#007aff',   // accent_text_color
+        active: themeParams.accent_text_color || '#007aff',   // accent_text_color
       },
     },
   });
