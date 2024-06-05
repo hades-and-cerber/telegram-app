@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useTelegram } from './hooks';
 import { Deposit } from './components/Deposit';
 import { Withdraw } from './components/Withdraw';
@@ -18,11 +19,14 @@ const App = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <div className="App">
+      <Router>
         <Header />
-        <Deposit />
-        <Withdraw />
-      </div>
+        <Routes>
+          <Route path="/deposit" element={<Deposit />} />
+          <Route path="/withdraw" element={<Withdraw />} />
+          <Route path="/" element={<Deposit />} />
+        </Routes>
+      </Router>
     </ThemeProvider>
   );
 };
