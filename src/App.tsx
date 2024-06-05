@@ -4,10 +4,11 @@ import { Deposit } from './components/Deposit';
 import { Withdraw } from './components/Withdraw';
 import { Header } from './ui/Header';
 import { createMUITheme } from './themes/theme';
+import { ThemeProvider } from '@mui/material';
 
 const App = () => {
   const { tg } = useTelegram();
-  createMUITheme(tg.themeParams);
+  const theme = createMUITheme(tg.themeParams);
 
   useEffect(() => {
     tg.ready();
@@ -16,12 +17,14 @@ const App = () => {
   }, []);
 
   return (
-    <div className="App">
-      <Header />
-      <h1>{tg.themeParams.text_color}</h1>
-      <Deposit />
-      <Withdraw />
-    </div>
+    <ThemeProvider theme={theme}>
+      <div className="App">
+        <Header />
+        <h1>{tg.themeParams.text_color}</h1>
+        <Deposit />
+        <Withdraw />
+      </div>
+    </ThemeProvider>
   );
 };
 
