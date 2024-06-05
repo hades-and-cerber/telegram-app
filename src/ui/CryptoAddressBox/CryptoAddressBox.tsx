@@ -26,9 +26,7 @@ const CryptoAddressBox = ({ address }: Props) => {
         alignItems: 'center',
         p: 2,
         gap: 2,
-        borderRadius: '8px',
         width: '300px',
-        boxShadow: 1
       }}
     >
       <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
