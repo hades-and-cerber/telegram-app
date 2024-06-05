@@ -8,7 +8,7 @@ import { ThemeProvider } from '@mui/material';
 
 const App = () => {
   const { tg } = useTelegram();
-  const theme = createMUITheme(tg.themeParams);
+  const theme = createMUITheme(tg.themeParams, tg.colorScheme === 'dark');
 
   useEffect(() => {
     tg.ready();

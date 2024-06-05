@@ -41,6 +41,3 @@
     cursor: pointer;
 }
 
-.address-box button:hover {
-    background-color: var(--tg-theme-button-color-hover);
-}

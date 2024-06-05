@@ -4,6 +4,26 @@
   box-sizing: border-box;
 }
 
+/* dark */
+/*:root {*/
+/*  --tg-theme-bg-color: #000000;*/
+/*  --tg-theme-text-color: #ffffff;*/
+/*  --tg-theme-hint-color: #98989e;*/
+/*  --tg-theme-button-text-color: #ffffff;*/
+/*  --tg-theme-button-color: #3e88f7;*/
+/*  --tg-theme-secondary-bg-color:  #1c1c1d;*/
+/*}*/
+
+/* light */
+/*:root {*/
+/*  --tg-theme-bg-color: #ffffff;*/
+/*  --tg-theme-text-color: #000000;*/
+/*  --tg-theme-hint-color: #8e8e93;*/
+/*  --tg-theme-button-text-color: #ffffff;*/
+/*  --tg-theme-button-color: #007aff;*/
+/*  --tg-theme-secondary-bg-color: #ffffff;*/
+/*}*/
+
 body {
   background-color: var(--tg-theme-bg-color);
   color: var(--tg-theme-text-color);
