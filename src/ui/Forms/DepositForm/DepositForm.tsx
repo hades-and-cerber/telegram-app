@@ -3,8 +3,8 @@ import styles from './depositForm.module.css';
 import { SetStateType } from '../../../types/common';
 import { Select } from '../../Select';
 import { DEPOSIT_CURRENCIES, USDT_CHAINS } from '../../../constants/currency';
-import { Typography, Button, Container } from '@mui/material';
-import { ToastMessage } from '../../ToastMessage';
+import { Typography, Container, CircularProgress } from '@mui/material';
+import { CryptoAddressBox } from '../../CryptoAddressBox';
 
 interface Props {
     depositAddress: string;
@@ -15,20 +15,8 @@ interface Props {
 }
 
 const DepositForm = ({ depositAddress,token, chain, onTokenChange, onChainChange }: Props) => {
-  const [isSnackbarOpen, setIsSnackbarOpen] = React.useState(false);
-  const handleCopy = () => {
-    navigator.clipboard.writeText(depositAddress);
-    setIsSnackbarOpen(true);
-  };
-
   return (
     <Container className={styles.container} sx={{ display: 'flex', width: '95%' }}>
-      <ToastMessage
-        isOpen={isSnackbarOpen}
-        handleClose={() => setIsSnackbarOpen(false)}
-        variant="success"
-        text="Address copied to clipboard"
-      />
       <Typography variant="h4" align="center" >Deposit💰</Typography>
       <Typography align="center" >Select the token to deposit (Min 2.0 USDT)</Typography>
       <Select
@@ -47,10 +35,7 @@ const DepositForm = ({ depositAddress,token, chain, onTokenChange, onChainChange
       />
       <div className={styles.depositAddressContainer}>
         <p>USDT Deposit Address</p>
-        <div className={styles.addressBox}>
-          <span>{depositAddress}</span>
-          <Button variant="contained" onClick={handleCopy} fullWidth>Copy</Button>
-        </div>
+        {depositAddress ? <CryptoAddressBox address={depositAddress} /> : <CircularProgress />}
       </div>
     </Container>
   );
