@@ -20,7 +20,6 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <div className="App">
         <Header />
-        <h1>{tg.themeParams.text_color}</h1>
         <Deposit />
         <Withdraw />
       </div>

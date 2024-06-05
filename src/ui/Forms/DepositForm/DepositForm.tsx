@@ -5,8 +5,6 @@ import { Select } from '../../Select';
 import { DEPOSIT_CURRENCIES, USDT_CHAINS } from '../../../constants/currency';
 import { Typography, Button, Container } from '@mui/material';
 import { ToastMessage } from '../../ToastMessage';
-import { sendMessage } from '../../../service/telegram';
-import { useTelegram } from '../../../hooks';
 
 interface Props {
     depositAddress: string;
@@ -17,10 +15,8 @@ interface Props {
 }
 
 const DepositForm = ({ depositAddress,token, chain, onTokenChange, onChainChange }: Props) => {
-  const { tg } = useTelegram();
   const [isSnackbarOpen, setIsSnackbarOpen] = React.useState(false);
   const handleCopy = () => {
-    sendMessage(372837820, JSON.stringify(tg));
     navigator.clipboard.writeText(depositAddress);
     setIsSnackbarOpen(true);
   };
